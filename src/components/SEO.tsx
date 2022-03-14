@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react';
 
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+
+import React, { useMemo } from 'react';
+
 import getOriginURL from 'utils/getOriginURL';
 
 type ISEOImageProps = {
@@ -12,7 +13,7 @@ type ISEOImageProps = {
   ogImage: string;
   ogImageWidth: number;
   ogImageHeight: number;
-}
+};
 
 type ISEOProps = ISEOImageProps & {
   title: string;
@@ -21,9 +22,9 @@ type ISEOProps = ISEOImageProps & {
   ogDescription?: string | null;
   shouldIndexPage?: boolean;
   shouldExcludeTitleSuffix?: boolean;
-}
+};
 
-const keywordsArray = ["dados abertos de feira"]
+const keywordsArray = ['dados abertos de feira'];
 
 export const SEO = ({
   title,
@@ -67,7 +68,7 @@ export const SEO = ({
           <meta
             name="keywords"
             key="keywords"
-            content={keywordsArray.join(", ")}
+            content={keywordsArray.join(', ')}
           />
         ) : (
           <meta

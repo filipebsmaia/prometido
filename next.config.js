@@ -2,9 +2,10 @@ const withPlugins = require('next-compose-plugins');
 
 module.exports = withPlugins([], {
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
   experimental: {
-    styledComponents: true,
+    styledComponents: true
   },
+  pageExtensions: ['tsx']
 });

@@ -29,9 +29,8 @@ export default createGlobalStyle`
     width: 100%;
   }
 
-  #__next {    
-    display: flex;
-    flex-direction: column;
+  #__next {   
+    background-color: ${(props) => props.theme.colors.backgroundPrimary};    
   }
 
 `;
