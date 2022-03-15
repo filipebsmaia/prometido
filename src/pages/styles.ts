@@ -4,3 +4,11 @@ export const Container = styled.div`
   display: flex;
   height: 100%;
 `;
+
+export const Content = styled.div`
+  width: 100%;
+
+  table, tbody {
+    width: 100%;
+  }
+`;

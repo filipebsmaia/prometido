@@ -4,14 +4,12 @@ import {
   FiHome, FiBook, FiInfo
 } from 'react-icons/fi';
 
-import type { NextPage } from 'next';
-
 import Image from '@components/Image';
 import { Link } from '@components/Link';
 
 import { Container, LinksList } from './styles';
 
-const Menu: NextPage = () => (
+const Menu = (): JSX.Element => (
   <Container>
     <Image
       src="/assets/logo.svg"

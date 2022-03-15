@@ -6,7 +6,7 @@ export type LinkProps = {
   href: string;
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export const Link: React.FC<LinkProps> = ({ children, href, ...rest }) => (
+export const Link = ({ children, href, ...rest }: LinkProps): JSX.Element => (
   <NextLink href={href}>
     <a {...rest}>{children}</a>
   </NextLink>
