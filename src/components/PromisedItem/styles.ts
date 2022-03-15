@@ -26,8 +26,14 @@ export const Container = styled.tr`
     }
 
     &:nth-child(2) {
-      max-width: 40em;
+      flex: 1;
+      justify-content: start;
+      width: 40em;
       text-align: start;
+    }
+
+    &:nth-child(3) {
+      width: 200px;
     }
 
     &:nth-child(4), &:nth-child(5) {
@@ -37,10 +43,14 @@ export const Container = styled.tr`
   
 `;
 
-export const BarColor = styled.div`
+interface IBarColorPorps {
+  color: string;
+}
+
+export const BarColor = styled.div<IBarColorPorps>`
   height: 40px;
   width: 3px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  background-color: #f90;
+  background-color: ${(props) => props.color};
 `;

@@ -7,11 +7,12 @@ import { Container, BarColor } from './styles';
 interface IPromisedItemProps {
   description: string;
   tag: string;
+  color: string;
   startDate: Date;
   endDate: Date;
 }
 
-const PromisedItem = ({ description, tag, startDate, endDate }: IPromisedItemProps): JSX.Element => {
+const PromisedItem = ({ description, tag, color, startDate, endDate }: IPromisedItemProps): JSX.Element => {
   const { parsedStartDate, parsedEndDate } = useMemo(() => {
     const formatter = new Intl.DateTimeFormat('pt-BR', {
       day: 'numeric',
@@ -28,7 +29,7 @@ const PromisedItem = ({ description, tag, startDate, endDate }: IPromisedItemPro
   return (
     <Container>
       <td>
-        <BarColor />
+        <BarColor color={color} />
       </td>
       <td>
         {description}

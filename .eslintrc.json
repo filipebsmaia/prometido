@@ -109,6 +109,15 @@
               "newlines-between": "always"
           }
       ],
+      "array-element-newline": [ "error",
+        {
+            "ArrayExpression": "consistent",
+            "ArrayPattern": {
+                "multiline": true,
+                "minItems": 3
+            }
+        }
+    ],
       "object-curly-newline": [ "error", 
           {
               "ObjectExpression": {
